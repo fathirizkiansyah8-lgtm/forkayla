@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifikasi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            position: relative;
+            z-index: 10;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .verification-form {
+            margin: 30px 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .hint {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-secondary {
+            background: #f5f5f5;
+            color: #666;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .error-message {
+            color: #ff1744;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .floating-heart {
+            position: fixed;
+            font-size: 20px;
+            color: #ff1744;
+            animation: float 6s ease-in-out;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="heartsContainer"></div>
+    
+    <div class="container">
+        <h1>🔐 Verifikasi Identitas</h1>
+        <p style="color: #666; margin-bottom: 30px;">
+            Sebelum melanjutkan, pastikan ini adalah orang yang tepat...
+        </p>
+        
+        <div class="verification-form">
+            <div class="form-group">
+                <label for="name">Nama Lengkap:</label>
+                <input type="text" id="shafira kayla rahmadani" placeholder="Masukkan nama lengkap">
+                <div class="hint">nama kamuu yaa</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="code">kode rahasia:</label>
+                <input type="password" id="13092008" placeholder="tanggal lahir sendiri">
+                <div class="hint">tanggal spesial</div>
+            </div>
+            
+            <div class="error-message" id="errorMessage">
+                Nama atau kode salah! Coba lagi ya~
+            </div>
+            
+            <button class="btn btn-primary" onclick="verify()">Verifikasi</button>
+            <button class="btn btn-secondary" onclick="window.close()">Tutup</button>
+        </div>
+    </div>
+            <script>
+                
+            // Reset error message
+            errorMessage.style.display = 'none';
+            
+            // Verifikasi (bisa diubah sesuai keinginan)
+            const correctName = 'shafira kayla rahmadani';
+            const correctCode = '13092008'; // Bisa diganti dengan tanggal spesial
+            
+            if (name === correctName && code === correctCode) {
+                // Benar, arahkan ke halaman proposal
+                window.location.href = 'love_proposal.html';
+            } else {
+                // Salah, tampilkan pesan error
+                errorMessage.style.display = 'block';
+                
+                // Shake animation untuk container
+                const container = document.querySelector('.container');
+                container.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    container.style.animation = '';
+                }, 500);
+            }
+        
+        // Enter key support
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                verify();
+            }
+        });
+        
+        // Add shake animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-10px); }
+                75% { transform: translateX(10px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

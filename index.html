@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Koleksi momen-momen indah kita bersama yang takkan pernah terlupakan">
+    <meta name="theme-color" content="#9c27b0">
+    <title>Kenangan Spesial Kita 💝 | Setiap Momen Bersamamu Berharga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #9c27b0;
+            --primary-dark: #6a0dad;
+            --secondary: #f5f7fa;
+            --text: #333;
+            --text-light: #555;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--secondary) 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==') repeat;
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 60px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(245,247,250,0.9) 100%);
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+            line-height: 1.2;
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #9c27b0, #673ab7);
+            border-radius: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+            background: linear-gradient(45deg, #6a0dad, #9c27b0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+
+        .media-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .media-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(156,39,176,0.1), rgba(103,58,183,0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .media-card:hover {
+            transform: translateY(-15px) scale(1.02) rotate(1deg);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .media-card:hover::before {
+            opacity: 1;
+        }
+
+        .media-container {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1; /* Memastikan container tidak menutupi video */
+        }
+        
+        .media-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 40%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+            pointer-events: none; /* Memastikan overlay tidak mengganggu interaksi dengan video */
+        }
+        
+        .media-card:hover .media-container::after {
+            opacity: 1;
+        }
+
+        .media-container img,
+        .media-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            z-index: 2; /* Memastikan video berada di atas elemen lain */
+        }
+
+        .media-card:hover .media-container img,
+        .media-card:hover .media-container video {
+            transform: scale(1.05) translateZ(0);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Animation for lazy loaded images */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .media-card {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .media-info {
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .media-card:hover .media-info {
+            background: linear-gradient(to bottom, #ffffff, #f9f5ff);
+        }
+
+        .media-info h3 {
+            color: #444;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .media-info p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .date {
+            display: inline-block;
+            background: linear-gradient(45deg, #9c27b0, #6a0dad);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-top: 15px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .date::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .date:hover::after {
+            left: 100%;
+        }
+
+        .heart {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            color: #ff4081;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 3; /* Memastikan heart berada di atas video */
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transform: scale(0.8);
+            pointer-events: none; /* Mencegah heart mengganggu interaksi dengan video */
+        }
+
+        .media-card:hover .heart {
+            opacity: 1;
+            transform: scale(1.4) rotate(15deg);
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1.2) rotate(15deg); }
+            50% { transform: scale(1.4) rotate(15deg); }
+            100% { transform: scale(1.2) rotate(15deg); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            background: linear-gradient(135deg, #6a0dad 0%, #9c27b0 100%);
+            color: white;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .floating-shape {
+            position: absolute;
+            opacity: 0.1;
+            z-index: -1;
+            animation: float 15s linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.1;
+            }
+            90% {
+                opacity: 0.1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .heart-float {
+            position: absolute;
+            font-size: 20px;
+            color: #ff4081;
+            animation: float 6s ease-in-out forwards;
+            pointer-events: none;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px) !important;
+        }
+
+        /* Logout Button Styles */
+        .btn-logout {
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-logout:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-logout:active {
+            transform: translateY(1px);
+        }
+
+        .btn-logout i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-logout:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Loading spinner */
+        .spinner {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .spinner.visible {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 40px 15px 30px;
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 0 5px;
+            }
+            
+            .media-card {
+                margin-bottom: 15px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            
+            .media-container {
+                height: auto;
+                min-height: 200px;
+            }
+            
+            .media-info {
+                padding: 15px;
+            }
+            
+            .media-info h3 {
+                font-size: 1.1rem;
+                margin-bottom: 5px;
+            }
+            
+            .media-info p {
+                font-size: 0.9rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+                margin: 30px 0 20px;
+            }
+            
+            .message-box {
+                padding: 20px 15px;
+                margin: 20px 10px;
+            }
+            
+            .message-box p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            
+            /* Tombol logout */
+            button[onclick="logout()"] {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="hearts"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Kenangan Spesial Kita</h1>
+            <p class="subtitle">Setiap momen bersamamu adalah cerita terindah yang takkan pernah terlupakan</p>
+        </header>
+
+        <!-- Video Section -->
+        <div class="section-title">
+            <h2>Video Kenangan</h2>
+        </div>
+        
+        <div class="gallery">
+            <!-- Video 1 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <video controls style="object-position: center 70%;">
+                        <source src="./videos/video1.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutaran video.
+                    </video>
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>ngerjain tugas bareng</h3>
+                    <p>Keren kan aku mau belajar (anak rajin).</p>
+                    <span class="date">9 November 2025</span>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <video controls>
+                        <source src="./videos/video2.mp4" type="video/mp4">
+                    </video>
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>gabut aja sih</h3>
+                    <p>ini asal aja tapi lucu kan.</p>
+                    <span class="date">1 November 2025</span>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <video controls>
+                        <source src="./videos/video3.mp4" type="video/mp4">
+                    </video>
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>ini mah pas di tolak</h3>
+                    <p>ternyata di luar ekspektasi ya jawabannya.</p>
+                    <span class="date">10 Oktober 2025</span>
+                </div>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <video controls>
+                        <source src="./videos/video4.mp4" type="video/mp4">
+                    </video>
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>first tiktok berdua</h3>
+                    <p>jujur ini malu banget sih.</p>
+                    <span class="date">20 September 2025</span>
+                </div>
+            </div>
+
+            <!-- Video 5 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <video controls style="object-position: center 70%;">
+                        <source src="./videos/video5.mp4" type="video/mp4">
+                    </video>
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>kalo ini vlog nonton berdua</h3>
+                    <p>ini ide lucuu vlog pertama kita.</p>
+                    <span class="date">13 Oktober 2025</span>
+                </div>
+            </div>
+
+            <!-- Video 6 -->
+            <div class="media-card">
+                <div class="media-container" style="padding-top: 70%;">
+                    <video controls style="object-position: center 30%;">
+                        <source src="./videos/video6.mp4" type="video/mp4">
+                    </video>
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>photobooth bagus kita</h3>
+                    <p>yang ini better lah ya dari pada yang pertama.</p>
+                    <span class="date">13 Oktober 2025</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Section -->
+        <div class="section-title">
+            <h2>Galeri Foto</h2>
+        </div>
+        
+        <div class="gallery">
+            <!-- Photo 1 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <img src="./images/foto1.jpeg" alt="Momen spesial kita" style="object-position: center 70%;">
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>makasii udah nemenin aku tanding</h3>
+                    <p>lucuu kan walaupun lagi sakit.</p>
+                </div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <img src="./images/foto2.jpeg" alt="Momen spesial kita" style="object-position: center 30%;">
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>first flower for uu</h3>
+                    <p>lucu fotonya yang ga lucu mah jawabannya.</p>
+                </div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <img src="./images/foto3.jpeg" alt="Momen spesial kita">
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>kalo ini beneran lucuu</h3>
+                    <p>setelah mengerjakan akuntansi.</p>
+                </div>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <img src="./images/foto4.jpeg" alt="Momen spesial kita">
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>first keluar berdua</h3>
+                    <p>mengejar waktu agar bisa tetap eskul.</p>
+                </div>
+            </div>
+
+            <!-- Photo 5 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <img src="./images/foto5.jpeg" alt="Momen spesial kita" style="object-position: center 70%;">
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>lucuu juga</h3>
+                    <p>yang ini juga abis ngerjain akuntansi .</p>
+                </div>
+            </div>
+
+            <!-- Photo 6 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <img src="./images/foto6.jpeg" alt="Momen spesial kita" style="object-position: center 70%;">
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>cie nonton orang ganteng</h3>
+                    <p>tapi telat si parah banget.</p>
+                </div>
+            </div>
+
+            <!-- Photo 7 -->
+            <div class="media-card">
+                <div class="media-container" style="padding-top: 70%;">
+                    <img src="./images/foto7.jpeg" alt="Momen spesial kita" style="object-position: center 70%;">
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>ini posenya lucu banget</h3>
+                    <p>foto kita banyak juga yaa abis ngerjain akuntansi.</p>
+                </div>
+            </div>
+
+            <!-- Photo 8 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <img src="./images/foto8.jpeg" alt="Momen spesial kita">
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>photobooth kedua kita</h3>
+                    <p>lucuu bangett sayangggg❤️</p>
+                </div>
+            </div>
+
+            <!-- Photo 9 -->
+            <div class="media-card">
+                <div class="media-container">
+                    <img src="./images/foto9.jpeg" alt="Momen spesial kita">
+                    <div class="heart">❤️</div>
+                </div>
+                <div class="media-info">
+                    <h3>paparazi sukma</h3>
+                    <p>kaget bisa ada yang inisiatif foto ini untung gemass.</p>
+                </div>
+            </div>
+
+            
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title" style="margin-top: 80px;">
+            <h2>Untuk Kamu sayangggg❤️</h2>
+        </div>
+        
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 80px; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; color: #555;">
+                "Setiap foto dan video di sini adalah cerita tentang kita. Tentang tawa dan semua momen indah yang kita lalui bersama, makasih sudah hadir dan menjadi bagian dari hidup aku, mengisi setiap halaman cerita kita dengan warna-warna yang indah dan momen yang tak akan pernah terlupakan."
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; color: #555;">
+                Aku bersyukur bisa kenal sama kamu, Setiap detik bersamamu adalah hadiah terindah yang pernah aku terima, mari kita buat lebih banyak kenangan indah bersama dan terus menulis cerita kita bersama.
+            </p>
+            <div style="margin-top: 30px;">
+                <span style="font-size: 1.5rem; color: #9c27b0;">❤️</span>
+                <p style="margin-top: 10px; font-weight: 500; color: #6a0dad;">Selalu dan Selamanya, Aku dan Kamu</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Kembali ke atas" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Loading Spinner -->
+    <div class="spinner" id="loadingSpinner">
+        <i class="fas fa-spinner fa-spin" style="font-size: 24px; color: var(--primary)"></i>
+    </div>
+
+    <!-- Tombol Logout -->
+    <div style="text-align: center; margin: 40px 0 60px;">
+        <button onclick="logout()" class="btn-logout">
+            <i class="fas fa-sign-out-alt"></i> Keluar
+        </button>
+    </div>
+
+    <script>
+        // Show loading spinner
+        function showLoading() {
+            document.getElementById('loadingSpinner').classList.add('visible');
+        }
+
+        // Hide loading spinner
+        function hideLoading() {
+            document.getElementById('loadingSpinner').classList.remove('visible');
+        }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Lazy load images and videos
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyMedia = document.querySelectorAll('img[loading="lazy"], video[loading="lazy"]');
+            
+            const lazyLoad = (target) => {
+                const io = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const media = entry.target;
+                            if (media.dataset.src) {
+                                media.src = media.dataset.src;
+                                media.removeAttribute('data-src');
+                            }
+                            media.classList.add('loaded');
+                            observer.unobserve(media);
+                        }
+                    });
+                });
+
+                io.observe(target);
+            };
+
+            lazyMedia.forEach(lazyLoad);
+        });
+
+        // Create floating shapes effect
+        function createFloatingShape() {
+            const shapes = ['❤️', '✨', '🌸', '💫', '💖', '🌹', '💕', '💝'];
+            const shape = document.createElement('div');
+            shape.classList.add('floating-shape');
+            shape.innerHTML = shapes[Math.floor(Math.random() * shapes.length)];
+            
+            // Random position and size
+            const size = Math.random() * 30 + 20;
+            const left = Math.random() * 100;
+            const delay = Math.random() * 5;
+            const duration = 10 + Math.random() * 20;
+            
+            shape.style.left = left + 'vw';
+            shape.style.fontSize = size + 'px';
+            shape.style.animationDelay = delay + 's';
+            shape.style.animationDuration = duration + 's';
+            
+            document.getElementById('hearts').appendChild(shape);
+            
+            // Remove shape after animation
+            setTimeout(() => {
+                if (shape.parentNode) {
+                    shape.remove();
+                }
+            }, (duration + delay) * 1000);
+        }
+        
+        // Create initial shapes
+        for (let i = 0; i < 20; i++) {
+            setTimeout(createFloatingShape, i * 300);
+        }
+
+        // Create shapes periodically
+        setInterval(createFloatingShape, 2000);
+
+        // Add hover effect to media cards
+        document.querySelectorAll('.media-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const heart = this.querySelector('.heart');
+                heart.style.animation = 'none';
+                heart.offsetHeight; // Trigger reflow
+                heart.style.animation = 'pulse 1s ease-in-out';
+            });
+        });
+
+        // Add animation to elements when scrolling
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Fungsi Logout
+        function logout() {
+            if (confirm('Yakin ingin menutup halaman ini?')) {
+                window.close(); // Menutup jendela/tab saat ini
+                // Fallback jika window.close() tidak berfungsi
+                window.location.href = 'about:blank';
+            }
+        }
+
+        // Observe all media cards
+        document.querySelectorAll('.media-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

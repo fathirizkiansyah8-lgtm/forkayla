@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEAAYY! 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff1744 50%, #ff6b6b 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            z-index: 10;
+            animation: slideIn 0.8s ease-out;
+            margin: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        h1 {
+            color: #ff1744;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .message {
+            margin-bottom: 40px;
+        }
+
+        .message p {
+            font-size: 1.5rem;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .heart-icon {
+            font-size: 4rem;
+            color: #ff1744;
+            animation: heartbeat 1.5s infinite;
+            margin: 20px 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.1);
+            }
+            45% {
+                transform: scale(1);
+            }
+            60% {
+                transform: scale(1.15);
+            }
+            80% {
+                transform: scale(1);
+            }
+        }
+
+        .floating-heart {
+            position: fixed;
+            font-size: 25px;
+            color: #ff1744;
+            animation: float 8s ease-in-out;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .confetti {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            animation: confettiFall 4s linear;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #e3724d, #ff6b6b);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 23, 205, 0.827);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 23, 205, 0.827);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff17c1, #ff6b6b);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255, 23, 205, 0.827);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 23, 205, 0.827);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff17c1;
+            border: 2px solid #ff17c1;
+        }
+
+        .btn-secondary:hover {
+            background: #ff17c1;
+            color: white;
+        }
+
+        .date-display {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .message p {
+                font-size: 1.3rem;
+            }
+
+            .heart-icon {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="heartsContainer"></div>
+    
+    <div class="container">
+        <div style="margin-bottom: 20px;">
+            <h1>YEAAYY! 💕</h1>
+            <p style="font-size: 1.2rem; color: #555; margin-top: 10px;">Aku seneng banget kamu mau jadi pacar aku!</p>
+        </div>
+        <h1>🎉 YEAAYY! 🎉</h1>
+        
+        <div class="message">
+            <p><strong>akhirnya yaa</strong></p>
+            <p>sekarang kita resmi pacaran! 💕</p>
+            <p>lovee uu sayangggg❤️</p>
+        </div>
+        
+        <div class="heart-icon">❤️</div>
+        
+        <div class="date-display">
+            <p id="currentDate"></p>
+        </div>
+        
+        <div class="action-buttons">
+                <a href="love_proposal.html" class="btn btn-primary">Kembali ke Awal 💝</a>
+                <a href="memories_special.html" class="btn btn-secondary">Lihat Kenangan Kita 💕</a>
+            </div>
+    </div>
+
+    <script>
+        // Membuat hati melayang
+        function createFloatingHeart() {
+            const heartsContainer = document.getElementById('heartsContainer');
+            const heart = document.createElement('div');
+            heart.className = 'floating-heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 4 + 4) + 's';
+            heart.style.opacity = Math.random() * 0.5 + 0.3;
+            heartsContainer.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+        
+        // Buat hati melayang setiap 300ms
+        setInterval(createFloatingHeart, 300);
+        
+        // Efek confetti
+        function createConfetti() {
+            const colors = ['#ff1744', '#ff6b6b', '#ff0000', '#ff00ff', '#ffff00', '#00ffff', '#4caf50'];
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 5000);
+                }, i * 50);
+            }
+        }
+        
+        // Tampilkan tanggal saat ini
+        function displayDate() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            const dateString = now.toLocaleDateString('id-ID', options);
+            document.getElementById('currentDate').textContent = `mulai sekarangg!!!, ${dateString}`;
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            displayDate();
+            createConfetti();
+        });
+    </script>
+</body>
+</html>

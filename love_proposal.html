@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shafira Kayla Rahmadani </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            position: relative;
+            z-index: 10;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #e3274d;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            margin-bottom: 30px;
+        }
+
+        .message p {
+            font-size: 1.3rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-yes {
+            background: linear-gradient(45deg, #ff1744, #ff6b6b);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 23, 68, 0.4);
+        }
+
+        .btn-yes:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 23, 68, 0.6);
+        }
+
+        .btn-no {
+            background: linear-gradient(45deg, #ff1744, #ff6b6b);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 23, 68, 0.4);
+        }
+
+        .btn-no:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 23, 68, 0.6);
+        }
+
+        .response {
+            display: none;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .response-yes {
+            color: #4caf50;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .floating-heart {
+            position: fixed;
+            font-size: 20px;
+            color: #ff1744;
+            animation: float 6s ease-in-out;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #ff1744;
+            animation: confettiFall 3s linear;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .music-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .music-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .message p {
+                font-size: 1.1rem;
+            }
+
+            .buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="heartsContainer"></div>
+    
+    <div class="container">
+        <h1>Shafira Kayla Rahmadani</h1>
+        <div class="message">
+            <p><strong>will you be my girlfriend??</strong></p>
+        </div>
+        
+        <div class="buttons">
+            <button class="btn btn-yes" id="btnYes">mauuu</button>
+            <button class="btn btn-no" id="btnNo">mauu bangett lah</button>
+        </div>
+        
+        <div class="response" id="response"></div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button class="music-toggle" id="musicToggle">🎵</button>
+
+    <script>
+        // Membuat hati melayang
+        function createFloatingHeart() {
+            const heartsContainer = document.getElementById('heartsContainer');
+            const heart = document.createElement('div');
+            heart.className = 'floating-heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            heart.style.opacity = Math.random() * 0.5 + 0.3;
+            heartsContainer.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+        
+        // Buat hati melayang setiap 500ms
+        setInterval(createFloatingHeart, 500);
+        
+        // Efek confetti
+        function createConfetti() {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.animationDuration = (Math.random() * 2 + 1) + 's';
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 3000);
+            }
+        }
+        
+        // Efek mengetik
+        function typeWriter(element, text, speed) {
+            let i = 0;
+            element.textContent = '';
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+        
+        // Setup tombol - jalankan setelah DOM ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM Loaded');
+            
+            const btnYes = document.getElementById('btnYes');
+            const btnNo = document.getElementById('btnNo');
+            const response = document.getElementById('response');
+            
+            console.log('btnYes:', btnYes);
+            console.log('btnNo:', btnNo);
+            console.log('response:', response);
+            
+            // Efek mengetik
+            const message = document.querySelector('.message p');
+            if (message) {
+                const originalText = message.textContent;
+                typeWriter(message, originalText, 30);
+            }
+            
+            // Tombol Yes
+            if (btnYes) {
+                btnYes.onclick = function() {
+                    console.log('btnYes clicked!');
+                    createConfetti();
+                    
+                    // Tunggu 1 detik lalu pindah ke halaman respons
+                    setTimeout(() => {
+                        window.location.href = 'response.html';
+                    }, 1000);
+                };
+            }
+            
+            // Tombol No
+            if (btnNo) {
+                btnNo.onclick = function() {
+                    console.log('btnNo clicked!');
+                    createConfetti();
+                    
+                    // Tunggu 1 detik lalu pindah ke halaman respons
+                    setTimeout(() => {
+                        window.location.href = 'response.html';
+                    }, 1000);
+                };
+            }
+            
+            // Music toggle
+            const musicToggle = document.getElementById('musicToggle');
+            const bgMusic = document.getElementById('bgMusic');
+            let isPlaying = false;
+            
+            musicToggle.addEventListener('click', function() {
+                if (isPlaying) {
+                    bgMusic.pause();
+                    musicToggle.textContent = '🎵';
+                } else {
+                    bgMusic.play().catch(e => console.log('Music play failed:', e));
+                    musicToggle.textContent = '🔇';
+                }
+                isPlaying = !isPlaying;
+            });
+        });
+    </script>
+</body>
+</html>
